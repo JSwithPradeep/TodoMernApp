@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.static((path.join(__dirname, './client/build'))))
 
 mongoose
-  .connect(process.env.DATABSE, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.DATABSE,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("database is connected"))
   .catch((error) => console.log(error));
 
